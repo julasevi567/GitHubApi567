@@ -30,8 +30,8 @@ Output - Int
 def getCommitCount(userName, repoName):
     link = "https://api.github.com/repos/" + userName + "/" + repoName + "/commits"
     repoData = requests.get(link)
-    commitData = json.loads(repoData.text)
-    commitCount = len(commitData)
+    commits = json.loads(repoData.text)
+    commitCount = len(commits)
 
     return commitCount
         
